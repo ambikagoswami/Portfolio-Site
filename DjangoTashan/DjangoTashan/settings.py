@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-d_)!(^_ar9w2xzq^%o2))8w5#)!l_lq(3dd#h=qk$k+gyl8l=l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True   # 🔴 Deployment ke liye False (testing me True rakh sakte ho)
 
-ALLOWED_HOSTS = ['portfolio-site-4bwr.onrender.com']   # 🔴 Render ke liye zaroori
+ALLOWED_HOSTS = ['*']   # 🔴 Render ke liye zaroori
 
 # Application definition
 INSTALLED_APPS = [
