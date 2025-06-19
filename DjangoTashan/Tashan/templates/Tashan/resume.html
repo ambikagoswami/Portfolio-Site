@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block Title %}
+Tashan Page
+{% endblock %}
+
+{% block content %}
+<div class="flex items-center justify-center h-screen bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600">
+  <a href="{% url 'home' %}"
+     class="text-2xl md:text-4xl px-8 py-4 bg-white backdrop-blur-md text-black font-semibold rounded-xl shadow-xl hover:bg-white/60 transition duration-500 hover:scale-90 bounce-loop">
+    Updating soon. Go back
+  </a>
+</div>
+
+<style>
+@keyframes bounceLoop {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  30% {
+    transform: scale(1.05) translateY(0px);
+  }
+  50% {
+    transform: scale(0.95) translateY(0px);
+  }
+  70% {
+    transform: scale(1.05) translateY(0px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.bounce-loop {
+  animation: bounceLoop 1s ease-in-out infinite;
+}
+</style>
+{% endblock %}
+
+

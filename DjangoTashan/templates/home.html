@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block Title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+
+<audio id="type-sound" src="{% static 'audio/keystroke.wav' %}" preload="auto"></audio>
+
+<div class="bg-fuchsia-100 min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="hover:bg-gradient-to-br from-purple-400 via-black to-blue-300 bg-fuchsia-500 text-white p-4 shadow-md">
+    <div class="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-between items-center max-w-6xl mx-auto">
+      <h2 class="text-3xl lg:text-4xl font-bold underline">PORTFOLIO</h2>
+      <nav class="space-x-4 lg:text-2xl text-lg">
+        <a href="{% url 'home' %}"><button class="px-3 py-1 border border-white rounded hover:bg-white hover:text-fuchsia-500 transition">Home</button></a>
+        <a href="{% url 'about' %}"><button class="px-3 py-1 border border-white rounded hover:bg-white hover:text-fuchsia-500 transition">About Me</button></a>
+        <a href="{% url 'skills' %}"><button class="px-3 py-1 border border-white rounded hover:bg-white hover:text-fuchsia-500 transition">Skills</button></a>
+        <a href="{% url 'internship' %}"><button class="px-3 py-1 border border-white rounded hover:bg-white hover:text-fuchsia-500 transition">Certifications</button></a>
+        <a href="{% url 'projects' %}"><button class="px-3 py-1 border border-white rounded hover:bg-white hover:text-fuchsia-500 transition">Projects</button></a>
+        <a href="{% url 'contacts' %}"><button class="px-3 py-1 border border-white rounded hover:bg-white hover:text-fuchsia-500 transition">Contact</button></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <main class="flex flex-col lg:flex-row justify-center items-center text-center py-20 px-4">
+    <div>
+      <h1 id="line1" class="text-4xl lg:text-6xl font-semibold text-fuchsia-700 mb-4 h-20"></h1>
+      <p id="line2" class="text-2xl lg:text-4xl text-gray-800 mb-6 h-16"></p>
+      <a href="{% url 'resume' %}">
+        <button class="bg-fuchsia-600 text-white px-6 py-2 rounded-full text-lg lg:text-2xl hover:bg-fuchsia-700 transition hover:scale-120">
+          Visit My Resume
+        </button>
+      </a>
+    </div>
+
+    <div class="mt-8 lg:mt-0 lg:ml-12">
+      <img src="{% static 'images/photo.jpg' %}" alt="My Image" class="size-[200px] lg:size-[280px] rounded-full border-6 border-fuchsia-500 hover:border-transparent shadow-[0_0_15px_#d946ef,_0_0_25px_#c026d3] transition duration-500">
+    </div>
+  </main>
+</div>
+
+<!-- Typing Script for Two Lines -->
+<script>
+  const lines = ["Hi, I'm Ambika Goswami", "A Passionate Coder"];
+  const elements = [document.getElementById("line1"), document.getElementById("line2")];
+  const typeSound = document.getElementById("type-sound");
+  let lineIndex = 0;
+  let charIndex = 0;
+
+  function typeNextChar() {
+    if (lineIndex < lines.length) {
+      if (charIndex < lines[lineIndex].length) {
+        elements[lineIndex].innerHTML += lines[lineIndex].charAt(charIndex);
+        typeSound.currentTime = 3;
+        typeSound.play();
+        charIndex++;
+        setTimeout(typeNextChar, 100);
+      } else {
+        // Move to next line
+        lineIndex++;
+        charIndex = 0;
+        setTimeout(typeNextChar, 600);
+      }
+    }
+  }
+
+  window.addEventListener("load", () => {
+    setTimeout(typeNextChar, 500);
+  });
+</script>
+{% endblock %}
+
+
+

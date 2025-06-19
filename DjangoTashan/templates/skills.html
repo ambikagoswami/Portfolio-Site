@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block Title %}
+Skills Page
+{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-fuchsia-50 flex items-center justify-center px-4 py-10">
+  <div class="max-w-4xl bg-white shadow-md rounded-xl p-8 space-y-6">
+    <a class="text-4xl font-bold" href="{% url 'home' %}"> ← </a>
+    <h1 class="text-4xl font-bold text-fuchsia-600 mb-4 mt-4">My Skills</h1>
+    
+    <p class="lg:text-xl text-lg text-gray-800 leading-relaxed">
+      I have worked on a variety of technologies and frameworks to build real-world applications and enhance my problem-solving capabilities. 
+      I am always eager to explore new technologies, improve my skills, and contribute to impactful projects. 
+      I believe in growing step by step, every day, through continuous learning.
+    </p>
+
+    <!-- Tools Section with Icons -->
+    <div>
+      <h2 class="text-2xl font-semibold text-fuchsia-600 mb-2">Tools & Technologies:</h2>
+      <ul class="lg:text-xl list-none text-gray-700 text-lg space-y-3">
+        <li class="flex items-center space-x-2 hover:text-emerald-500">
+          <i class="devicon-html5-plain colored text-2xl"></i>
+          <span>HTML</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:text-emerald-500">
+          <i class="devicon-css3-plain colored text-2xl"></i>
+          <span>CSS</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:text-emerald-500">
+          <i class="devicon-javascript-plain colored text-2xl"></i>
+          <span>JavaScript (JS)</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:text-emerald-500">
+          <i class="devicon-python-plain colored text-2xl"></i>
+          <span>Python</span>
+        </li>
+        <li class="flex items-center space-x-2 hover:text-emerald-500">
+          <i class="devicon-django-plain colored text-2xl"></i>
+          <span>Django</span>
+        </li>
+        <li><em>...exploring more</em></li>
+      </ul>
+    </div>
+
+    <!-- Interpersonal Skills -->
+    <div>
+      <h2 class="text-xl font-semibold text-fuchsia-600 mb-2">Interpersonal Skills:</h2>
+      <ul class="lg:text-2xl list-disc list-inside text-gray-700 text-lg space-y-1">
+        <li class="hover:text-emerald-500">Volunteering (National Cadet Corps)</li>
+        <li class="hover:text-emerald-500">Teamwork (NCC, Kendriya Vidyalaya)</li>
+        <li class="hover:text-emerald-500">Creative Strategy (Kendriya Vidyalaya)</li>
+        <li class="hover:text-emerald-500">Critical Thinking (Kendriya Vidyalaya)</li>
+        <li class="hover:text-emerald-500">Student Discipline (NCC, Kendriya Vidyalaya)</li>
+        <li><em>...trying to deserve more</em></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+

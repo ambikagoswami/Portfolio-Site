@@ -1,0 +1,28 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 
+    {% block Title %}{% endblock %}
+  </title>
+
+  <!-- Devicon for language/tool icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <!-- Tailwind & Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  {% tailwind_css %}
+</head>
+
+<body class="bg-purple-300">
+  {% block content %}{% endblock %}
+
+  <!-- Activate Lucide Icons after content -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
+

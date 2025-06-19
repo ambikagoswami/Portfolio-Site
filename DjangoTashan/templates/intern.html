@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% load static %}
+{% block Title %}
+Internship and Certifications Page
+{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-fuchsia-50 flex items-center justify-center px-4 py-10">
+  <div class="max-w-4xl bg-white shadow-md rounded-xl p-8 space-y-6">
+    <a class="text-4xl font-bold  " href= "{% url "home" %}"> ← </a>
+    <h1 class="text-4xl lg:text-6xl font-bold text-fuchsia-600 mb-4 mt-4 lg:mb-6">Internships & Certifications</h1>
+
+    <div>
+      <h2 class="text-2xl lg:text-4xl font-semibold text-fuchsia-600 mb-2 lg:mb-4">Certifications</h2>
+
+      <h3 class="text-xl lg:text-3xl font-semibold text-gray-800 mt-4 mb-1 lg:mt-6 lg:mb-3">Skill-Based & Academic</h3>
+      <ul class="list-disc list-inside text-gray-700 text-lg lg:text-2xl space-y-1 lg:space-y-3">
+        <li>
+  Certified Machine Learning Specialization – 
+  <a href="{% static 'images/AWS.jpg' %}" target="_blank" class="text-blue-600 underline hover:text-blue-900">
+    AWS Certificate
+  </a> 
+  (Amazon Web Services)
+</li>
+
+        <li><a href="{% static 'images/Google.jpg' %}" target="_blank" class="text-blue-600 underline hover:text-blue-900">Google Analytics Certification</a></li>
+        <li><a href="{% url "home" %}" target="_blank" class="text-blue-600 underline hover:text-blue-900">Prahaar Coding Contest </a> – Hackathon (Jabalpur Engineering College)</li>
+        <li>Effective Communication in the Workplace – The Open University (via IBM SkillBuild)</li>
+        <li>Olympiads – Kendriya Vidyalaya Chhatarpur</li>
+
+      </ul>
+
+      <h3 class="text-xl lg:text-3xl font-semibold text-gray-800 mt-4 mb-1 lg:mt-6 lg:mb-3">Non-Academic</h3>
+      <ul class="lg:text-2xl list-disc list-inside text-gray-700 text-lg space-y-1 lg:space-y-3">
+        <li>Sports Certificates – Kendriya Vidyalaya Chhatarpur</li>
+        <li>Music & Cultural Participation – Social Science Exhibition (KVC)</li>
+        <li>Volunteering – NCC 'A' Certificate</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-2xl lg:text-4xl font-semibold text-fuchsia-600 mb-2 lg:mb-4">Internships</h2>
+      <p class="lg:text-2xl text-lg text-gray-700 italic">...exploring</p>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

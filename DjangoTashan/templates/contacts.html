@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block Title %}
+Contact Page
+{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-fuchsia-50 flex items-center justify-center px-4 py-10">
+  <div class="max-w-xl bg-white shadow-md rounded-xl p-8 space-y-6">
+    <a class="text-4xl font-bold" href="{% url 'home' %}">←</a>
+    <h1 class="text-4xl font-bold text-fuchsia-600 mb-4 mt-4">Get in Touch</h1>
+
+    <p class="text-lg text-gray-800 leading-relaxed">
+      Social Platforms:
+    </p>
+
+    <ul class="list-none space-y-4 text-lg text-gray-700">
+      <li class="flex items-center space-x-3">
+        <i data-lucide="github" class="w-5 h-5 text-black"></i>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/ambikagoswami" class="text-blue-600 hover:underline" target="_blank">
+          github.com/ambikagoswami
+        </a>
+      </li>
+      <li class="flex items-center space-x-3">
+        <i data-lucide="linkedin" class="w-5 h-5 text-blue-700"></i>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/ambika-goswami-30a767331" class="text-blue-600 hover:underline" target="_blank">
+          linkedin.com/in/ambika-goswami
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block Title %}
+About Page
+{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-fuchsia-50 flex items-center justify-center px-4 py-10">
+  <div class="max-w-3xl bg-white shadow-md p-8 lg:p-12 rounded-xl hover:bg-gray-600 transition duration-300">
+    <a class="text-4xl font-bold  hover:text-white" href= "{% url "home" %}"> ← </a>
+    <h1 class="text-4xl font-bold text-fuchsia-600 mt-6 mb-6">About Me</h1>
+    <p class="text-lg lg:text-2xl text-gray-800 hover:text-white leading-relaxed transition duration-300">
+      I am an enthusiastic <span class="text-black hover:text-white">Computer Science Engineering</span> student at 
+      <span class="text-black hover:text-white">Jabalpur Engineering College</span>, Madhya Pradesh.
+      With a strong passion for coding and problem-solving, I’m continuously working to enhance my technical skills 
+      through real-world projects, internships, and continuous learning.I belong to Chhatarpur, Madhya Pradesh, and completed both my higher and senior secondary education from <span class="text-black hover:text-white">Kendriya Vidyalaya, Chhatarpur </span>. My core interests lie in software development, 
+      web technologies, and competitive programming.  I aspire to become a proficient developer who contributes to innovative and impactful solutions.
+  </div>
+</div>
+{% endblock %}
