@@ -10,11 +10,13 @@ cookiecutter==2.6.0
 Django==5.2.3
 django-browser-reload==1.18.0
 django-tailwind==4.0.1
+gunicorn==23.0.0
 idna==3.10
 Jinja2==3.1.6
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 mdurl==0.1.2
+packaging==25.0
 pillow==11.2.1
 Pygments==2.19.1
 python-dateutil==2.9.0.post0
